@@ -1,7 +1,7 @@
 #!/bin/bash
 package=/etc/os-release
 
-if grep -q "Ubuntu" $package
+if grep -q "Ubuntu" $package || grep -q "Debian" $package
 then
   sudo apt-get update
   sudo apt dist-upgrade
